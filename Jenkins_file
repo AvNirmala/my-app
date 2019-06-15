@@ -7,4 +7,10 @@ stage('Compile-Package'){
 def mvnHome = tool name: 'maven3', type: 'maven'
 sh "${mvnHome}/bin/mvn package"
 }
+stage('Email Notification'){
+mail bcc: '', body: '''Hi Jenkins Email Notifications
+
+Thanks,
+Nirmala Reddy Arava''', cc: '', from: '', replyTo: '', subject: 'jenkins Pipeline Job', to: 'aravanirmalareddy@gmail.com'
+}
 }
