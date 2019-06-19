@@ -13,4 +13,12 @@ mail bcc: '', body: '''Hi Jenkins Email Notifications
 Thanks,
 Nirmala Reddy Arava''', cc: '', from: '', replyTo: '', subject: 'jenkins Pipeline Job', to: 'aravanirmalareddy@gmail.com'
 }
+stage('Slack Notification'){
+ slackSend baseUrl: 'https://hooks.slack.com/services/', 
+ channel: 'jenkins-pipeline-demo', 
+ color: 'good', iconEmoji: '', 
+ message: 'Slack In Jenkins!', 
+ teamDomain: 'nirmala', 
+ tokenCredentialId: 'slack-demo', username: '
+}
 }
