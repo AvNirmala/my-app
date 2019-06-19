@@ -16,9 +16,9 @@ Nirmala Reddy Arava''', cc: '', from: '', replyTo: '', subject: 'jenkins Pipelin
 stage('Slack Notification'){
  slackSend baseUrl: 'https://hooks.slack.com/services/', 
  channel: 'jenkins-pipeline-demo', 
- color: 'good', iconEmoji: '', 
+ color: 'good', 
  message: 'Slack In Jenkins!', 
  teamDomain: 'nirmala', 
- tokenCredentialId: 'slack-demo', username: '
+ tokenCredentialId: 'slack-demo'
 }
 }
